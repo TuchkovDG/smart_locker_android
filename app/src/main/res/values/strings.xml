@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">SmartLocker</string>
+    <string name="app_name">Smart-Lock</string>
     <string name="no_internet">No internet connection</string>
+    <string name="free_all_locks">Release all the locks?</string>
+    <string name="free_this_lock">Release this lock?</string>
+    <string name="search_new_lock">Search new lock…</string>
+    <string name="this_lock_is_reserved">This lock is reserved, continue search?</string>
+    <string name="this_lock_is_free">This lock is free, reserve?</string>
 </resources>

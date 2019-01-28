@@ -47,17 +47,13 @@ class LockActivity : BaseActivity(), LockContract.View {
 
     private fun initOnClickListener() {
         siv_status_locker.setOnClickListener {
-            if (locker?.status == 0) {
-                locker?.status = 1
-            } else if (locker?.status == 1) {
-                locker?.status = 0
-            }
+            presenter.updateLock(locker)
             setLockerStatusOnView()
         }
         ll_delete_this_locker.setOnClickListener { _ ->
-            alert("UnReserve this locker?") {
+            alert(getString(R.string.free_this_lock)) {
                 yesButton {
-                    presenter.unReserveLocker(locker)
+                    presenter.unReserveLock(locker)
                 }
                 noButton {}
             }.show()

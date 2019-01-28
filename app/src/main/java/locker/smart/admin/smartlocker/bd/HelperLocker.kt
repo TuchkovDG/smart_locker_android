@@ -20,6 +20,24 @@ class HelperLocker : SQLiteOpenHelper(App.instance.applicationContext, DATABASE_
         onCreate(db)
     }
 
+    fun addOrUpdateLockers(lock: LockerModel) {
+        val db = this.writableDatabase
+
+        val cursor = db.query(TABLE_LOCKERS, null, "$COLUMN_UID = ?",
+                arrayOf(lock.uid), null, null, null)
+        val cv = ContentValues()
+        cv.put(COLUMN_UID, lock.uid)
+        cv.put(COLUMN_STATUS, lock.status)
+        if (cursor.moveToFirst()) {
+            db.update(TABLE_LOCKERS, cv, "$COLUMN_UID = ?", arrayOf(lock.uid))
+        } else {
+            db.insert(TABLE_LOCKERS, null, cv)
+        }
+        cursor.close()
+
+        db.close()
+    }
+
     fun addOrUpdateLockers(lockers: ArrayList<LockerModel>) {
         val db = this.writableDatabase
 

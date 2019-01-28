@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Смарт-Замок</string>
+    <string name="no_internet">Без підключення до інтернету</string>
+    <string name="free_all_locks">Звільнити всі замки?</string>
+    <string name="free_this_lock">Звільнити цей замок?</string>
+    <string name="search_new_lock">Пошук нового замка…</string>
+    <string name="this_lock_is_reserved">Цей замок зарезервований, продовжити пошук?</string>
+    <string name="this_lock_is_free">Цей замок вільний, зарезервувати?</string>
+</resources>

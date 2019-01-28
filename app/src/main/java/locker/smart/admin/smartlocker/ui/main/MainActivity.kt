@@ -85,7 +85,7 @@ class MainActivity : BaseActivity(), MainContract.View, LockerListAdapter.MainLi
             startActivity<SearchActivity>()
         }
         ll_delete_all_locker.setOnClickListener { _ ->
-            alert("UnReserve all lockers?") {
+            alert(getString(R.string.free_all_locks)) {
                 yesButton { presenter.unReserveAllUserLockers() }
                 noButton {}
             }.show()

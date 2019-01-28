@@ -14,6 +14,8 @@ interface LockContract {
 
     interface Presenter : BasePresenter {
 
-        fun unReserveLocker(locker: LockerModel?)
+        fun updateLock(locker: LockerModel?)
+
+        fun unReserveLock(locker: LockerModel?)
     }
 }
